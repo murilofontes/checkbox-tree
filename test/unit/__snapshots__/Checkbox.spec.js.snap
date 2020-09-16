@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Check if component renders corretly" 1`] = `<div class="checkbox-container custom-control custom-checkbox"><input type="checkbox" id="chkbox-123" class="custom-control-input" value="123"> <label for="chkbox-123" class="custom-control-label">Name</label></div>`;

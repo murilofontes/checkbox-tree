@@ -1,4 +1,5 @@
 # checkbox-tree
+Project made in order to checkup skills :)
 
 ## Project setup
 ```

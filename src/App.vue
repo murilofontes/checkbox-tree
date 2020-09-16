@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="main-container">
+    <h1>Names list</h1>
+    <DataTable :items="data" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DataTable from "./components/organisms/DataTable.vue";
+import data from "./data/data.json";
+import { mapActions } from 'vuex'
 
 export default {
-  name: 'App',
+  name: "App",
+  computed: {
+    data () {
+      return data
+    }
+  },
   components: {
-    HelloWorld
+    DataTable
+  },
+  methods: {
+    ...mapActions(['clearAllNamesSelection'])
+  },
+  beforeDestroy () {
+    this.clearAllNamesSelection()
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+.main-container {
+  width: 60%;
+  margin: 4em auto;
+
+  @media screen and (min-height: 700px) {
+     width: 90%;
+     margin: 2em;
+  }
 }
 </style>
