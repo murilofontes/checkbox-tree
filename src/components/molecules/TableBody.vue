@@ -47,8 +47,7 @@ export default {
     }
   }
   .children-container {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 2em;
   }
 }
 </style>
