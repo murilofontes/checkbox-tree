@@ -43,7 +43,7 @@ export default {
 .table-body {
   .row-container {
     &:hover {
-      background-color: #20c997;
+      background-color: #d8d8ff;
     }
   }
   .children-container {
